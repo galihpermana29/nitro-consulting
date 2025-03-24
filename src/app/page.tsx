@@ -18,7 +18,7 @@ export default function Home() {
         <div className="container-fluid no-padding h-full">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/hd/hero-bg.jpg')" }}
+            style={{ backgroundImage: "url('/images/landing.jpg')" }}
           ></div>
 
           <div className="backdrop-banner"></div>

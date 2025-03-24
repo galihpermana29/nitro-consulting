@@ -112,6 +112,11 @@
   .menu-mobile {
     display: block;
   }
+
+  .container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @media (min-width: 769px) {

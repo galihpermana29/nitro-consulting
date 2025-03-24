@@ -13,59 +13,43 @@ export default function PortfolioPage() {
   const portfolioCompanies: PortfolioCompany[] = [
     {
       id: 1,
-      name: "Ritase",
-      logo: "/images/ritase-logo.png",
+      name: "Rezka Nayatama",
+      logo: "/images/neska.png",
       description:
-        "Ritase is a logistics and trucking solution platform that accommodates shippers and transporters needs in a form of SaaS, marketplace, e-commerce, and e-wallet all within one distinguished platform based on lifelong field experience.",
-      website: "https://ritase.com/",
+        "a leading company in the food processing industry, specializing in Konjac Roots (Amorphophallus Mueller). With our headquarters situated in the vibrant CBC Office District in Tangerang, Indonesia, we are proud to serve customers both locally and globally.",
+      website: "https://rezkanayatama.com/id/",
     },
     {
       id: 2,
-      name: "Miota",
-      logo: "/images/miota-logo.png",
+      name: "LA OMVI",
+      logo: "/images/laomvi.png",
       description:
-        "Miota pioneered the implementation of IoT in Indonesia. With innovative and solution-oriented approach, Miota became the first company to provide an end-to-end solution through their smart ecosystem. Miota are paving the way for the future of IoT nationwide and international.",
-      website: "https://miota.id/",
+        "La Omvi embarked on its journey in Indonesia, employing an interdisciplinary approach to craft specific forms of expression, particularly in the visual realm.",
+      website: "https://laomvi.com/",
     },
     {
       id: 3,
-      name: "Mioto",
-      logo: "/images/mioto-logo.png",
+      name: "Duluin",
+      logo: "/images/duluin.png",
       description:
-        "Mioto serves as the future Mobility-as-a-Service platform. Utilizing the latest IoT technology aims to solve the inefficiencies, transparency, and control in transportation & logistics by implementing state-of-the-art devices, analytical research, optimization, and flexibility.",
-      website: "https://miota.id/",
+        "Initially we aim to empower individuals with financial freedom and control by revolutionizing the way they access and manage the wages they earn, fostering a world where financial welfare can be accessed by everyone. ",
+      website: "https://duluin.com/",
     },
     {
       id: 4,
-      name: "RentalQ",
-      logo: "/images/rentalq-logo.png",
+      name: "ADPList",
+      logo: "/images/adplist.png",
       description:
-        "RentalQ is a new online rental platform from Agung Rent and Miota for B2B using Enterprise Fleet Management and OBD2 modules with support from Miota Topology. rentalQ strives to be the next generation rental platform in Indonesia.",
-      website: "https://rentalq.co.id/",
+        "ADPList was born in 2021 during the COVID pandemic from a spreadsheet, and has since grown to over 32K+ mentors who have contributed over 150 million minutes of mentorship in almost every country across the globe, across all skills at every level of career.",
+      website: "https://adplist.org/about-us",
     },
     {
       id: 5,
-      name: "DTECH-ENGINEERING",
-      logo: "/images/dtech-logo.png",
+      name: "Tamanschool",
+      logo: "/images/taman-school.webp",
       description:
-        "DTECH-ENGINEERING is a global technology company with a core of expertise in novel tech research and development and end-to-end product development. DTECH-ENGINEERING is the first company that invented high technology CNC Milling Machine in Indonesia and our product Supermill became a pioneer of CNC milling machines made in Indonesia.",
-      website: "https://dtech-engineering.com/",
-    },
-    {
-      id: 6,
-      name: "Rezka Nayatama",
-      logo: "/images/rezka-logo.png",
-      description:
-        "Rezka Nayatama is a company in the hospitality sector that is currently on the implementation of an agro-tourism industry (Konjac plant) as a supplementary development for its future seafront resort in West Lombok.",
-      website: "https://companieshouse.id/rezka-nayatama",
-    },
-    {
-      id: 7,
-      name: "Rajamobil",
-      logo: "/images/rajamobil-logo.png",
-      description:
-        "Rajamobil provides access to customers and dealers in a single unified platform, managing digital business for car dealerships. Rajamobil strengths lie in their direct access to multiple brands and dealers across Indonesia thatll enhance sales activities.",
-      website: "https://www.rajamobil.com/",
+        "Tamanschool is organization to make students feel safe and brave. This implies a commitment to creating a positive and supportive learning environment where students feel comfortable expressing themselves and taking risks.",
+      website: "https://www.tamanschool.com/",
     },
   ];
 
@@ -117,13 +101,6 @@ export default function PortfolioPage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <p className="text-lg mb-4">
-              We invest across all stages and sectors, with a focus on
-              enterprise, life and frontier technology.
-            </p>
           </div>
         </div>
       </section>

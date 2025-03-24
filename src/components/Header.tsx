@@ -17,7 +17,7 @@ export default function Header() {
             <div className="flex-shrink-0">
               <Link href="/">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo-nitro.png"
                   alt="Agung Ventures"
                   width={80}
                   height={40}
@@ -74,7 +74,7 @@ export default function Header() {
               <div className="flex-shrink-0">
                 <Link href="/">
                   <Image
-                    src="/images/logo.png"
+                    src="/images/logo-nitro.png"
                     alt="Agung Ventures"
                     width={80}
                     height={35}

@@ -15,13 +15,15 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Phone } from "lucide-react";
 
 // Contact form schema
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  phone: z.string().min(6, { message: "Please enter a valid phone number." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+  message: z
+    .string()
+    .min(10, { message: "Message must be at least 10 characters." }),
 });
 
 export default function ContactPage() {
@@ -34,36 +36,39 @@ export default function ContactPage() {
     defaultValues: {
       name: "",
       email: "",
-      phone: "",
       message: "",
     },
   });
 
   // Form submission
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
+    const formData = {
+      name: values.name,
+      email: values.email,
+      message: values.message,
+    };
 
-    // Simulate API call
-    setTimeout(() => {
-      console.log(values);
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      form.reset();
-
-      // Reset success message after 3 seconds
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 3000);
-    }, 1000);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+    } catch (error) {
+      alert("Something went wrong");
+    }
+    setIsSubmitting(false);
+    setIsSuccess(true);
+    form.reset();
   }
 
   return (
     <div>
       {/* Banner */}
-      <Banner
-        backgroundImage="/images/hd/contact-bg.jpg"
-        title="Contact Us"
-      />
+      <Banner backgroundImage="/images/contact-us.jpg" title="Contact Us" />
 
       {/* Contact Form Section */}
       <section className="formContactUs py-16 bg-gray-100">
@@ -75,13 +80,18 @@ export default function ContactPage() {
                   <h4 className="text-2xl font-bold mb-8">Send Us A Message</h4>
 
                   <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <form
+                      onSubmit={form.handleSubmit(onSubmit)}
+                      className="space-y-6"
+                    >
                       <FormField
                         control={form.control}
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-white">Your Name</FormLabel>
+                            <FormLabel className="text-white">
+                              Your Name
+                            </FormLabel>
                             <FormControl>
                               <Input
                                 placeholder="Enter your name"
@@ -112,7 +122,7 @@ export default function ContactPage() {
                         )}
                       />
 
-                      <FormField
+                      {/* <FormField
                         control={form.control}
                         name="phone"
                         render={({ field }) => (
@@ -128,14 +138,16 @@ export default function ContactPage() {
                             <FormMessage />
                           </FormItem>
                         )}
-                      />
+                      /> */}
 
                       <FormField
                         control={form.control}
                         name="message"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-white">Message</FormLabel>
+                            <FormLabel className="text-white">
+                              Message
+                            </FormLabel>
                             <FormControl>
                               <textarea
                                 placeholder="Enter your message"
@@ -150,7 +162,8 @@ export default function ContactPage() {
 
                       {isSuccess && (
                         <div className="bg-green-600 text-white p-3 rounded-md">
-                          Your message has been sent successfully. We'll get back to you soon.
+                          Your message has been sent successfully. We'll get
+                          back to you soon.
                         </div>
                       )}
 
@@ -168,31 +181,42 @@ export default function ContactPage() {
 
               <div className="md:col-span-1">
                 <div className="addContact bg-white p-8 rounded-lg shadow-md h-full">
-                  <h4 className="text-xl font-bold mb-6">Contact Information</h4>
+                  <h4 className="text-xl font-bold mb-6">
+                    Contact Information
+                  </h4>
 
                   <div className="space-y-8">
                     <div className="adcontactus">
-                      <div className="flex items-start">
+                      <div className="flex gap-[10px] items-start">
                         <div className="flex-shrink-0 mt-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-3">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                          </svg>
+                          <Phone size={20} />
                         </div>
-                        <p>
-                          Jl. Taman Cut Mutiah No. 14, Menteng, Jakarta 10330 Indonesia
-                        </p>
+                        <p>0896-1528-4037</p>
                       </div>
                     </div>
 
                     <div className="emailcontact">
                       <div className="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="mr-3"
+                        >
                           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                           <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <a href="mailto:admin@agungventures.com" className="text-blue-600 hover:text-blue-800">
-                          admin@agungventures.com
+                        <a
+                          href="mailto:dymasadjibudiono@gmail.com"
+                          className="text-blue-600 hover:text-blue-800"
+                        >
+                          dymasadjibudiono@gmail.com
                         </a>
                       </div>
                     </div>
