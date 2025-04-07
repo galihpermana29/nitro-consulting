@@ -25,9 +25,9 @@ export default function Home() {
 
           <div className="carousel-caption absolute inset-0 flex flex-col justify-center text-white px-12 md:px-20 z-10">
             <h3 className="text-3xl md:text-5xl font-bold mb-2">
-              Nitro Consulting
+              Nitro Consulting & Advisory
             </h3>
-            <p className="text-xl md:text-2xl">We Stand Together</p>
+            <p className="text-xl md:text-2xl">Turning Insights into Growth </p>
           </div>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function Home() {
           <div className="container-fluid">
             <div className="content-wwa max-w-4xl mx-auto text-center">
               <h2 className="text-2xl md:text-3xl uppercase font-bold mb-8 text-gray-700">
-                NITRO CONSULTING
+                NITRO CONSULTING & ADVISORY (NITRO)
               </h2>
               <p className="text-base md:text-lg mb-4 font-[300] text-gray-600">
                 Nitro Consulting & Advisory help early-stage companies overcome

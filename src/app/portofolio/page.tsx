@@ -16,7 +16,7 @@ export default function PortfolioPage() {
       name: "Rezka Nayatama",
       logo: "/images/neska.png",
       description:
-        "a leading company in the food processing industry, specializing in Konjac Roots (Amorphophallus Mueller). With our headquarters situated in the vibrant CBC Office District in Tangerang, Indonesia, we are proud to serve customers both locally and globally.",
+        "We assisted Rezka with comprehensive financial modeling, valuation, and strategies to enhance management efficiency, enabling them to make informed decisions and improve financial outcomes.",
       website: "https://rezkanayatama.com/id/",
     },
     {
@@ -24,7 +24,7 @@ export default function PortfolioPage() {
       name: "LA OMVI",
       logo: "/images/laomvi.png",
       description:
-        "La Omvi embarked on its journey in Indonesia, employing an interdisciplinary approach to craft specific forms of expression, particularly in the visual realm.",
+        "We provided valuation services using a market approach, helping La Omvi to accurately assess their market position and leverage growth opportunities.",
       website: "https://laomvi.com/",
     },
     {
@@ -32,7 +32,7 @@ export default function PortfolioPage() {
       name: "Duluin",
       logo: "/images/duluin.png",
       description:
-        "Initially we aim to empower individuals with financial freedom and control by revolutionizing the way they access and manage the wages they earn, fostering a world where financial welfare can be accessed by everyone. ",
+        "We supported Duluin with valuation services using the income approach, ensuring a thorough analysis of their revenue streams and long-term financial viability. ",
       website: "https://duluin.com/",
     },
     {
@@ -40,15 +40,15 @@ export default function PortfolioPage() {
       name: "ADPList",
       logo: "/images/adplist.png",
       description:
-        "ADPList was born in 2021 during the COVID pandemic from a spreadsheet, and has since grown to over 32K+ mentors who have contributed over 150 million minutes of mentorship in almost every country across the globe, across all skills at every level of career.",
+        "Our expertise in go-to-market and user acquisition strategies enabled ADPList to effectively tap in to the new market and expand their user base.",
       website: "https://adplist.org/about-us",
     },
     {
       id: 5,
-      name: "Tamanschool",
+      name: "Trans Optima Perkasa",
       logo: "/images/taman-school.webp",
       description:
-        "Tamanschool is organization to make students feel safe and brave. This implies a commitment to creating a positive and supportive learning environment where students feel comfortable expressing themselves and taking risks.",
+        "Our collaboration with TOP involved providing financial modeling and valuation services, to streamline their financial systems and achieve greater transparency.",
       website: "https://www.tamanschool.com/",
     },
   ];
@@ -58,7 +58,7 @@ export default function PortfolioPage() {
       {/* Banner */}
       <Banner
         backgroundImage="/images/porto.jpg"
-        title="It's a mutually beneficial bond"
+        title="Growing enterprises to succeed"
       />
 
       <section className="py-16 md:py-24">
@@ -66,8 +66,8 @@ export default function PortfolioPage() {
           <div className="text-center mb-12">
             <div className="w-24 h-1 bg-gray-800 mx-auto mb-8"></div>
             <p className="text-xl max-w-3xl mx-auto">
-              AV combines high-growth companies with sustainable business model
-              and effective ecosystem
+              Our past experiences also differ in various industry to help us
+              provide well-considered outputs and recommendations.
             </p>
           </div>
 
