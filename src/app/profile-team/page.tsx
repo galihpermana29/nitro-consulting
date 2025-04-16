@@ -103,8 +103,10 @@ export default function TeamPage() {
 
                         <SheetContent>
                           <SheetHeader>
-                            <SheetTitle>{member.name}</SheetTitle>
-                            <SheetDescription className="text-base font-semibold text-gray-700">
+                            <SheetTitle className="text-left">
+                              {member.name}
+                            </SheetTitle>
+                            <SheetDescription className="text-base font-semibold text-gray-700 text-left">
                               {member.position}
                             </SheetDescription>
                           </SheetHeader>
