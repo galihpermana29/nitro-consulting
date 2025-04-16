@@ -1,7 +1,5 @@
 "use client";
 
-import Banner from "@/components/Banner";
-import { useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -11,12 +9,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Image from "next/image";
+import { ReactNode } from "react";
 
 interface TeamMember {
   id: number;
   name: string;
   position: string;
-  bio: string;
+  bio: string | ReactNode;
   image?: string;
 }
 
@@ -26,7 +25,30 @@ export default function TeamPage() {
       id: 1,
       name: "Dymas Budiono",
       position: "Managing Partner",
-      bio: "Dymas is currently the CEO of Nitro Consulting, spearheading the transportations and logistics holding company for almost 25 years. His experience in entrepreneurship further expands the corporation surpassing the transformation of the business landscape.",
+      bio: (
+        <div>
+          <p>
+            Dymas Budiono is the Managing Partner of Nitro Consulting &
+            Advisory. His experience in entrepreneurship and investment expands
+            the corporation surpassing the transformation of the business
+            landscape.
+          </p>
+          <div className="my-[12px]">
+            <p>Experience</p>
+            <ul>
+              <li>- Investment Analyst - Agung Ventures</li>
+              <li>- Equity Research - Trimegah Sekuritas</li>
+              <li>- Investment Banking - MNC Sekuritas</li>
+            </ul>
+          </div>
+          <div>
+            <p>Education</p>
+            <ul>
+              <li>- Management - Brawijaya University</li>
+            </ul>
+          </div>
+        </div>
+      ),
       image: "/images/dymas-photo.png",
     },
   ];
@@ -34,20 +56,20 @@ export default function TeamPage() {
   return (
     <div>
       {/* Banner */}
-      <Banner
+      {/* <Banner
         backgroundImage="/images/our-team.jpg"
         title="Some things are better done together"
-      />
+      /> */}
 
       {/* Team Section */}
-      <div style={{ backgroundImage: "url('/images/hd/hero-bg.jpg')" }}>
-        <section className="wwa bg-gray-100 opacity-95 py-16 md:py-24 min-h-[80vh] flex justify-center items-center">
-          <div className="container-fluid">
+      <div>
+        <section className="wwa  flex justify-center items-center">
+          <div>
             <div className="wordingprofile text-left mb-12 max-w-[500px]">
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-600">
                 Our Team
               </h3>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 max-w-[400px]">
                 Our team has diverse professional backgrounds, bringing a wealth
                 of perspectives and expertise
               </p>
@@ -57,7 +79,7 @@ export default function TeamPage() {
               <div className="gap-8 mx-auto flex justify-start items-start">
                 {teamMembers.map((member) => (
                   <div key={member.id} className="team-member">
-                    <div className="wrapprofileimage p-4 text-center">
+                    <div className="wrapprofileimage p-4 text-left">
                       <div className="h-[150px] mb-4">
                         <Image
                           src={member.image!}
@@ -88,7 +110,7 @@ export default function TeamPage() {
                           </SheetHeader>
 
                           <div className="mt-6">
-                            <p className="text-base">{member.bio}</p>
+                            <div className="text-base">{member.bio}</div>
                           </div>
                         </SheetContent>
                       </Sheet>

@@ -15,7 +15,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import TeamPage from "../profile-team/page";
 
 // Contact form schema
 const formSchema = z.object({
@@ -71,58 +72,72 @@ export default function ContactPage() {
       <Banner backgroundImage="/images/contact-us.jpg" title="Contact Us" />
 
       {/* Contact Form Section */}
-      <section className="formContactUs py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="wordingcontactUs">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="md:col-span-2">
-                <div className="formContact bg-[#333333] text-white p-8 rounded-lg shadow-md">
-                  <h4 className="text-2xl font-bold mb-8">Send Us A Message</h4>
+      <div className="flex flex-col justify-center items-center container-fluid py-16 md:py-24 md:flex-row md:justify-between md:gap-[20px]">
+        <div className="w-[100%] md:w-[50%]">
+          <TeamPage />
+        </div>
+        <div className="formContact bg-[#333333] text-white p-8 rounded-lg shadow-md w-full">
+          <h4 className="text-2xl font-bold mb-8">Send Us A Message</h4>
 
-                  <Form {...form}>
-                    <form
-                      onSubmit={form.handleSubmit(onSubmit)}
-                      className="space-y-6"
-                    >
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-white">
-                              Your Name
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Enter your name"
-                                {...field}
-                                className="bg-[#444444] border-[#555555] text-white"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
+          <div className="mb-[30px]">
+            <div className="flex gap-[10px] items-start mb-[8px]">
+              <div className="flex-shrink-0 mt-1">
+                <Phone size={20} />
+              </div>
+              <p>+62-896-1528-4037</p>
+            </div>
+            <div className="flex gap-[10px] items-start">
+              <div className="flex-shrink-0 mt-1">
+                <Mail size={20} />
+              </div>
+              <a
+                href="mailto:dymasadjibudiono@gmail.com"
+                className="text-blue-600 hover:text-blue-800"
+              >
+                dymasadjibudiono@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-white">Your Name</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Enter your name"
+                        {...field}
+                        className="bg-[#444444] border-[#555555] text-white"
                       />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-white">Email</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Enter your email"
-                                {...field}
-                                className="bg-[#444444] border-[#555555] text-white"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-white">Email</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Enter your email"
+                        {...field}
+                        className="bg-[#444444] border-[#555555] text-white"
                       />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-                      {/* <FormField
+              {/* <FormField
                         control={form.control}
                         name="phone"
                         render={({ field }) => (
@@ -140,93 +155,42 @@ export default function ContactPage() {
                         )}
                       /> */}
 
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-white">
-                              Message
-                            </FormLabel>
-                            <FormControl>
-                              <textarea
-                                placeholder="Enter your message"
-                                {...field}
-                                className="bg-[#444444] border-[#555555] text-white w-full min-h-[120px] rounded-md border p-2"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-white">Message</FormLabel>
+                    <FormControl>
+                      <textarea
+                        placeholder="Enter your message"
+                        {...field}
+                        className="bg-[#444444] border-[#555555] text-white w-full min-h-[120px] rounded-md border p-2"
                       />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-                      {isSuccess && (
-                        <div className="bg-green-600 text-white p-3 rounded-md">
-                          Your message has been sent successfully. We'll get
-                          back to you soon.
-                        </div>
-                      )}
-
-                      <Button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="bg-white text-gray-800 hover:bg-gray-200 px-8 py-2"
-                      >
-                        {isSubmitting ? "Submitting..." : "Submit"}
-                      </Button>
-                    </form>
-                  </Form>
+              {isSuccess && (
+                <div className="bg-green-600 text-white p-3 rounded-md">
+                  Your message has been sent successfully. We'll get back to you
+                  soon.
                 </div>
-              </div>
+              )}
 
-              <div className="md:col-span-1">
-                <div className="addContact bg-white p-8 rounded-lg shadow-md h-full">
-                  <h4 className="text-xl font-bold mb-6">
-                    Contact Information
-                  </h4>
-
-                  <div className="space-y-8">
-                    <div className="adcontactus">
-                      <div className="flex gap-[10px] items-start">
-                        <div className="flex-shrink-0 mt-1">
-                          <Phone size={20} />
-                        </div>
-                        <p>0896-1528-4037</p>
-                      </div>
-                    </div>
-
-                    <div className="emailcontact">
-                      <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="mr-3"
-                        >
-                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                          <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <a
-                          href="mailto:dymasadjibudiono@gmail.com"
-                          className="text-blue-600 hover:text-blue-800"
-                        >
-                          dymasadjibudiono@gmail.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-white text-gray-800 hover:bg-gray-200 px-8 py-2"
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </Button>
+            </form>
+          </Form>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

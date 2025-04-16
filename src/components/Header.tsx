@@ -38,14 +38,6 @@ export default function Header() {
 
                 <li>
                   <Link
-                    href="/profile-team"
-                    className={cn("menu-option hover:text-gray-600 text-base")}
-                  >
-                    Team
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/portofolio"
                     className={cn("menu-option hover:text-gray-600 text-base")}
                   >
@@ -129,14 +121,7 @@ export default function Header() {
                             About
                           </Link>
                         </li>
-                        <li>
-                          <Link
-                            href="/profile-team"
-                            className="block hover:text-gray-600"
-                          >
-                            Team
-                          </Link>
-                        </li>
+
                         <li>
                           <Link
                             href="/portofolio"

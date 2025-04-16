@@ -6,14 +6,14 @@ export default function Footer() {
       <div className="container-fluid">
         <div id="grid-footer" className="flex flex-col md:flex-row">
           <div id="grid-venture" className="md:w-1/4 mb-4 md:mb-0">
-            <p>© 2021 Nitro Consulting</p>
+            <p>© 2025 Nitro Consulting & Advisory</p>
           </div>
           <div id="grid-link" className="md:w-2/4 mb-4 md:mb-0">
             <ul className="footer-link flex flex-wrap space-x-4">
               {/* For future links */}
             </ul>
           </div>
-          <div id="grid-sosmed" className="md:w-1/4 flex justify-end">
+          {/* <div id="grid-sosmed" className="md:w-1/4 flex justify-end">
             <div className="footersosmed">
               <a
                 href="https://www.linkedin.com/company/agungventures/"
@@ -32,7 +32,7 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

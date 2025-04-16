@@ -40,16 +40,9 @@ export default function Home() {
               <h2 className="text-2xl md:text-3xl uppercase font-bold mb-8 text-gray-700">
                 NITRO CONSULTING & ADVISORY (NITRO)
               </h2>
-              <p className="text-base md:text-lg mb-4 font-[300] text-gray-600">
-                Nitro Consulting & Advisory help early-stage companies overcome
-                challenges, scale up their business, and address nationwide
-                early-stage companies issues
-              </p>
-              <p className="text-base md:text-lg font-[300] text-gray-600">
-                Nitro is a boutique consulting and advisory specializing in
-                assisting early-stage companies and startups in validating their
-                valuation, creating compelling pitch decks, and providing
-                strategic business consulting
+              <p className="text-base md:text-lg mb-4 font-[300] text-gray-600 max-w-[600px] mx-auto">
+                We provide easy access for early-stage enterprises to scale up
+                their business to the top level.
               </p>
             </div>
           </div>

@@ -15,40 +15,49 @@ export default function PortfolioPage() {
       id: 1,
       name: "Rezka Nayatama",
       logo: "/images/neska.png",
-      description:
-        "We assisted Rezka with comprehensive financial modeling, valuation, and strategies to enhance management efficiency, enabling them to make informed decisions and improve financial outcomes.",
+      description: "Financial modelling, valuation, and management efficiency",
       website: "https://rezkanayatama.com/id/",
     },
     {
       id: 2,
       name: "LA OMVI",
-      logo: "/images/laomvi.png",
-      description:
-        "We provided valuation services using a market approach, helping La Omvi to accurately assess their market position and leverage growth opportunities.",
+      logo: "/images/laomvi3.png",
+      description: "Valuation services with market approach",
       website: "https://laomvi.com/",
     },
     {
       id: 3,
       name: "Duluin",
       logo: "/images/duluin.png",
-      description:
-        "We supported Duluin with valuation services using the income approach, ensuring a thorough analysis of their revenue streams and long-term financial viability. ",
+      description: "Valuation services with income approach",
       website: "https://duluin.com/",
     },
     {
       id: 4,
       name: "ADPList",
       logo: "/images/adplist.png",
-      description:
-        "Our expertise in go-to-market and user acquisition strategies enabled ADPList to effectively tap in to the new market and expand their user base.",
+      description: "Go-to-market and user acquisition strategy",
       website: "https://adplist.org/about-us",
     },
     {
       id: 5,
-      name: "Trans Optima Perkasa",
+      name: "Taman School",
       logo: "/images/taman-school.webp",
-      description:
-        "Our collaboration with TOP involved providing financial modeling and valuation services, to streamline their financial systems and achieve greater transparency.",
+      description: "Financial modeling services",
+      website: "https://www.tamanschool.com/",
+    },
+    {
+      id: 52,
+      name: "Xaltex",
+      logo: "/images/xaltex.png",
+      description: "Pitch deck creation assistance",
+      website: "https://www.tamanschool.com/",
+    },
+    {
+      id: 61,
+      name: "Trans Optima Perkasa",
+      logo: "/images/top.avif",
+      description: "Valuation services with income approach",
       website: "https://www.tamanschool.com/",
     },
   ];
@@ -87,9 +96,11 @@ export default function PortfolioPage() {
                   />
                 </div>
 
-                <p className="text-sm flex-grow mb-6">{company.description}</p>
+                <p className="text-sm flex-grow mb-6 text-center">
+                  {company.description}
+                </p>
 
-                <div className="mt-auto">
+                {/* <div className="mt-auto">
                   <a
                     href={company.website}
                     target="_blank"
@@ -98,7 +109,7 @@ export default function PortfolioPage() {
                   >
                     Visit
                   </a>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
