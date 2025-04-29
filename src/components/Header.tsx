@@ -140,7 +140,7 @@ export default function Header() {
                         </li>
                       </ul>
 
-                      <div className="socmed-mobile mt-4">
+                      {/* <div className="socmed-mobile mt-4">
                         <ul className="flex space-x-3">
                           <li>
                             <a
@@ -160,7 +160,7 @@ export default function Header() {
                             </a>
                           </li>
                         </ul>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </nav>
