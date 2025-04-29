@@ -10,12 +10,25 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+const bannerData = [
+  {
+    image: "/images/landing2.jpg",
+    title: "Nitro Consulting & Advisory",
+    subtitle: "Strategy Meets Value",
+  },
+  {
+    image: "/images/landing.jpg",
+    title: "Nitro Consulting & Advisory",
+    subtitle: "Turning Insights into Growth",
+  },
+];
+
 export default function Home() {
   return (
     <div>
       {/* Hero Section */}
       <section className="home-banner relative h-screen">
-        <div className="container-fluid no-padding h-full">
+        {/* <div className="container-fluid no-padding h-full">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: "url('/images/landing.jpg')" }}
@@ -29,6 +42,32 @@ export default function Home() {
             </h3>
             <p className="text-xl md:text-2xl">Turning Insights into Growth </p>
           </div>
+        </div> */}
+        <div className="relative">
+          <Carousel opts={{ loop: true }} className="w-full h-screen relative">
+            <CarouselContent>
+              {bannerData.map((item, index) => (
+                <CarouselItem key={index} className="relative">
+                  <div
+                    className="h-screen w-full bg-cover bg-center"
+                    style={{ backgroundImage: `url('${item.image}')` }}
+                  >
+                    <div className="absolute inset-0 bg-black/40" />
+                    <div className="absolute inset-0 flex flex-col justify-center items-start text-white px-10 md:px-20 z-10">
+                      <h1 className="text-3xl md:text-5xl font-bold">
+                        {item.title}
+                      </h1>
+                      <p className="text-lg md:text-2xl mt-2">
+                        {item.subtitle}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="z-20" />
+            <CarouselNext className="z-20" />
+          </Carousel>
         </div>
       </section>
 

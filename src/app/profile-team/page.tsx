@@ -35,16 +35,22 @@ export default function TeamPage() {
           </p>
           <div className="my-[12px]">
             <p>Experience</p>
-            <ul>
-              <li>- Investment Analyst - Agung Ventures</li>
-              <li>- Equity Research - Trimegah Sekuritas</li>
-              <li>- Investment Banking - MNC Sekuritas</li>
+            <ul className="ml-[12px]">
+              <li className="list-disc">
+                {" "}
+                Investment Analyst - Agung Ventures
+              </li>
+              <li className="list-disc">
+                {" "}
+                Equity Research - Trimegah Sekuritas
+              </li>
+              <li className="list-disc"> Investment Banking - MNC Sekuritas</li>
             </ul>
           </div>
           <div>
             <p>Education</p>
-            <ul>
-              <li>- Management - Brawijaya University</li>
+            <ul className="ml-[12px]">
+              <li className="list-disc">Management - Brawijaya University</li>
             </ul>
           </div>
         </div>

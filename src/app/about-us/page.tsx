@@ -24,10 +24,10 @@ export default function AboutUs() {
               About Us
             </h2>
             <p className="text-base md:text-lg font-[300] text-gray-800 max-w-[600px] mx-auto">
-              Nitro is a boutique consulting and advisory specializing in
-              assisting early-stage companies and startups in validating their
-              valuation, creating compelling pitch decks, and providing
-              strategic business consulting
+              Nitro Consulting & Advisory is a boutique consulting and advisory
+              firm specializing in assisting early-stage enterprises in
+              validating their valuation, creating compelling pitch decks, and
+              providing strategic business consulting.
             </p>
             <p className="text-base md:text-lg font-[300] text-gray-800 max-w-[600px] mx-auto mt-[18px]">
               We help early-stage enterprises overcome challenges, scale up
@@ -124,7 +124,7 @@ export default function AboutUs() {
           <div className="container-fluid">
             <div className="max-w-4xl mx-auto">
               <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-200">
-                SERVICES
+                OUR SERVICES
               </h3>
 
               <p className="text-center text-base md:text-lg mb-12 text-gray-200">
