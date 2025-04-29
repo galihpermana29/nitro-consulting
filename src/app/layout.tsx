@@ -7,14 +7,15 @@ import ClientBody from "./ClientBody";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ['400', '500', '600', '700', '800'],
-  display: 'swap',
-  variable: '--font-inter',
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Agung Ventures | Indonesia Venture Capital",
-  description: "Agung Ventures is a venture capital company based in Indonesia, focusing on supporting sustainable businesses and creating synergies across various industries.",
+  title: "Nitro Consulting & Advisory",
+  description:
+    "Nitro Consulting & Advisory is a boutique consulting and advisory firm specializing in assisting early-stage enterprises in validating their valuation, creating compelling pitch decks, and providing strategic business consulting.",
 };
 
 export default function RootLayout({
@@ -27,9 +28,7 @@ export default function RootLayout({
       <ClientBody>
         <div className="font-inter">
           <Header />
-          <main>
-            {children}
-          </main>
+          <main>{children}</main>
           <Footer />
         </div>
       </ClientBody>
